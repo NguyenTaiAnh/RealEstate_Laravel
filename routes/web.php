@@ -1,5 +1,6 @@
 <?php
-
+$exitCode = Artisan::call('storage:link', [] );
+echo $exitCode; // 0 exit code for no errors.
 // FRONT-END ROUTES
 Route::get('/', 'FrontpageController@index')->name('home');
 Route::get('/slider', 'FrontpageController@slider')->name('slider.index');
